@@ -80,7 +80,8 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = [
-        "recipe[precise::default]"
+        "recipe[precise::default]",
+        "git"
     ]
   end
 end
