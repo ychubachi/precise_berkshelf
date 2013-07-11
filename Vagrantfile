@@ -78,14 +78,14 @@ Vagrant.configure("2") do |config|
         :server_debian_password => 'debpass',
         :server_repl_password => 'replpass'
       },
-      "rbenv" => {
-        "user_installs" => [{
-          "user" => "vagrant",
-          "rubies" => ["2.0.0-p195"],
-          "global" => "2.0.0-p195",
-          "gems" => {
+      rbenv: {
+        user_installs: [{
+          user: "vagrant",
+          rubies: ["2.0.0-p195"],
+          global: "2.0.0-p195",
+          gems: {
             "2.0.0-p195" => [
-              {"name" => "bundler"}
+              {name: "bundler"}
             ]
           }
         }]
