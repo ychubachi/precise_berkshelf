@@ -96,7 +96,8 @@ Vagrant.configure("2") do |config|
         "recipe[precise::default]",
         "git",
         "ruby_build",
-        "rbenv::user"
+        "rbenv::user",
+        "mysql"
     ]
   end
 end
