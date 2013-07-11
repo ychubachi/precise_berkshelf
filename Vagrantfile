@@ -61,6 +61,7 @@ Vagrant.configure("2") do |config|
   # Enabling the Berkshelf plugin. To enable this globally, add this configuration
   # option to your ~/.vagrant.d/Vagrantfile file
   config.berkshelf.enabled = true
+  config.omnibus.chef_version = :latest
 
   # An array of symbols representing groups of cookbook described in the Vagrantfile
   # to exclusively install and copy to Vagrant's shelf.
@@ -76,12 +77,26 @@ Vagrant.configure("2") do |config|
         :server_root_password => 'rootpass',
         :server_debian_password => 'debpass',
         :server_repl_password => 'replpass'
+      },
+      rbenv: {
+        user_installs: [{
+          user: "vagrant",
+          rubies: ["2.0.0-p195"],
+          global: "2.0.0-p195",
+          gems: {
+            "2.0.0-p195" => [
+              {name: "bundler"}
+            ]
+          }
+        }]
       }
     }
 
     chef.run_list = [
         "recipe[precise::default]",
-        "git"
+        "git",
+        "ruby_build",
+        "rbenv::user"
     ]
   end
 end
