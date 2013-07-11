@@ -77,12 +77,26 @@ Vagrant.configure("2") do |config|
         :server_root_password => 'rootpass',
         :server_debian_password => 'debpass',
         :server_repl_password => 'replpass'
+      },
+      "rbenv" => {
+        "user_installs" => [{
+          "user" => "vagrant",
+          "rubies" => ["2.0.0-p195"],
+          "global" => "2.0.0-p195",
+          "gems" => {
+            "2.0.0-p195" => [
+              {"name" => "bundler"}
+            ]
+          }
+        }]
       }
     }
 
     chef.run_list = [
         "recipe[precise::default]",
-        "git"
+        "git",
+        "ruby_build",
+        "rbenv::user"
     ]
   end
 end
