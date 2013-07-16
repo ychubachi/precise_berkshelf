@@ -81,10 +81,13 @@ Vagrant.configure("2") do |config|
       rbenv: {
         user_installs: [{
           user: "vagrant",
-          rubies: ["2.0.0-p195"],
+          rubies: ["2.0.0-p195", "1.9.3-p374"],
           global: "2.0.0-p195",
           gems: {
             "2.0.0-p195" => [
+              {name: "bundler"}
+            ],
+            "1.9.3-p374" => [
               {name: "bundler"}
             ]
           }
