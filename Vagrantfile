@@ -92,6 +92,9 @@ Vagrant.configure("2") do |config|
             ]
           }
         }]
+      },
+      emacs: {
+        package: ["emacs24"]
       }
     }
 
@@ -101,6 +104,7 @@ Vagrant.configure("2") do |config|
         "git",
         "ruby_build",
         "rbenv::user"
+        "recipe[precise::emacs24]"
     ]
   end
 end
