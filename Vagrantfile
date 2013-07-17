@@ -101,9 +101,10 @@ Vagrant.configure("2") do |config|
     chef.run_list = [
         "recipe[precise::default]",
         "recipe[apt::default]",
+        "zsh",
         "git",
         "ruby_build",
-        "rbenv::user"
+        "rbenv::user",
         "recipe[precise::emacs24]"
     ]
   end
