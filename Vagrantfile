@@ -103,6 +103,7 @@ Vagrant.configure("2") do |config|
         "recipe[apt::default]",
         "zsh",
         "git",
+        "vim",
         "ruby_build",
         "rbenv::user",
         "recipe[precise::emacs24]"
