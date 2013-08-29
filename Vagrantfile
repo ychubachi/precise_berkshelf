@@ -95,15 +95,17 @@ Vagrant.configure("2") do |config|
       }
     }
 
-    chef.run_list = [
-        "precise",
-        "apt",
-        "zsh",
-        "git",
-        "vim",
-        "ruby_build",
-        "rbenv::user",
-        "precise::emacs24"
-    ]
+    chef.run_list =
+      [
+       "precise",
+       "apt",
+       "zsh",
+       "git",
+       "vim",
+       "ruby_build",
+       "rbenv::user",
+       "precise::emacs24",
+       "precise::heroku",
+      ]
   end
 end
