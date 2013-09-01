@@ -81,7 +81,8 @@ Vagrant.configure("2") do |config|
           global: "2.0.0-p247",
           gems: {
             "2.0.0-p247" => [
-              {name: "bundler"}
+                             {name: "bundler"},
+                             {name: "rails"},
             ]
           }
         }]
