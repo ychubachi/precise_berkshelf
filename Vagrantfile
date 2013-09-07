@@ -104,6 +104,7 @@ Vagrant.configure("2") do |config|
        "precise::emacs24",
        "precise::heroku",
        "nodejs",
+       "hub",
       ]
   end
 end
