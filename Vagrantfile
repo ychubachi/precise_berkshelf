@@ -83,7 +83,6 @@ Vagrant.configure("2") do |config|
             "2.0.0-p247" => [
                              {name: "bundler"},
                              {name: "rails"},
-                             {name: "travis"},
             ]
           }
         }]
