@@ -1,12 +1,14 @@
 ## 概要
+
 enPiT用の仮想環境です．
 Railsアプリを作成し，GitHub，Travis CI，Herokuと連携する設定を行い，Deployするscriptを同梱しています．
 
 ## 前提
 
-- VirtualBox/Vagrantが使えること
-- [Heroku Toolbelt](https://toolbelt.heroku.com/)がインストールされていること
-- [github/hub](https://github.com/github/hub)がインストールされていること
+- VirtualBox（4.2.18で動作確認）
+  - https://www.virtualbox.org/
+- Vagrantが使えること（v1.3.1で動作確認）
+  - http://downloads.vagrantup.com/
 
 ## Host OSでの作業
 
@@ -26,16 +28,37 @@ Gust OSと起動．
 $ vagrant up
 ```
 
-## Guest OS
+### SSH接続
 
-## GitHubへのSSH公開鍵
+Macの場合
+
+```bash
+$ vagrant ssh
+```
+
+Windowsの場合，Putty/TeraTermなどでSSH接続
+
+host: localhost
+port: 2222
+user: vagrant
+password: vagrant
+
+## Guest OSでの作業
+
+### 作業用ディレクトリ
+
+Host OSは/vagrantディレクトリに，Gest OSのこのREADME.mdがあるディレクトリをマウントします．この下にあるworkディレクトリで作業してください．
+
+```bash
+cd /vagrant/work
+```
+
+### GitHubへのSSH公開鍵
 
 GitHubへSSH公開鍵を登録していない場合は下記のコマンドを実行してください．
 
 ```bash
-$ wget https://gist.github.com/acoulton/1969779/raw/5b24fc88fb978f6fec89196903432a94aa1c209b/github-connect.sh
-$ chmod 755 github-connect.sh
-$ ./github-connect.sh
+$ /vagrant/scripts/github-connect.sh
 ```
 
 （このscriptは[Create and register an SSH key for your github account](https://gist.github.com/acoulton/1969779)から一部を改変したものです．）
@@ -45,11 +68,7 @@ $ ./github-connect.sh
 下記のコマンドを実行してください．
 
 ```
-$ mkdir -p /vagrant/work
-$ cd /vagrant/work
-$ git clone git@github.com:ychubachi/rails_github_travis_heroku.git
-$ cd rails_github_travis_heroku
-$ ./generate_rails.sh <app_name>
+$ /vagrant/scripts/generate_rails.sh <app_name>
 ```
 
 Heroku，Travis CIへのログインの後，アプリの生成が始まります．
