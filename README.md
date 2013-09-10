@@ -8,13 +8,14 @@ Railsアプリを作成し，GitHub，Travis CI，Herokuと連携する設定を
 - VirtualBox（4.2.18で動作確認）
   - https://www.virtualbox.org/
 - Vagrantが使えること（v1.3.1で動作確認）
-  - http://downloads.vagrantup.com/
+  - http://www.vagrantup.com/
 
 ## Host OSでの作業
 
 ### はじめの1回
 
 Gust OSのイメージの作成と起動．１時間程度かかります．
+電源とネットワークの状態のよい環境で実行してください．
 
 ```bash
 $ vagrant up --provision
@@ -22,7 +23,7 @@ $ vagrant up --provision
 
 ### 2回目以降
 
-Gust OSと起動．
+Gust OSを起動．
 
 ```bash
 $ vagrant up
@@ -38,10 +39,10 @@ $ vagrant ssh
 
 Windowsの場合，Putty/TeraTermなどでSSH接続
 
-host: localhost
-port: 2222
-user: vagrant
-password: vagrant
+- host: localhost
+- port: 2222
+- user: vagrant
+- password: vagrant
 
 ## Guest OSでの作業
 
@@ -55,13 +56,13 @@ cd /vagrant/work
 
 ### GitHubへのSSH公開鍵
 
-GitHubへSSH公開鍵を登録していない場合は下記のコマンドを実行してください．
+Guest OSでGitHubへSSH公開鍵を登録していない場合は下記のコマンドを実行してください．
 
 ```bash
 $ /vagrant/scripts/github-connect.sh
 ```
 
-（このscriptは[Create and register an SSH key for your github account](https://gist.github.com/acoulton/1969779)から一部を改変したものです．）
+（このscriptは[Create and register an SSH key for your github account](https://gist.github.com/acoulton/1969779)です．）
 
 ## Railsアプリの自動生成
 
