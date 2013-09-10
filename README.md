@@ -12,25 +12,16 @@ Railsアプリを作成し，GitHub，Travis CI，Herokuと連携する設定を
 
 ## Host OSでの作業
 
-### はじめの1回
+### Gust OSの起動
 
-Gust OSのイメージの作成と起動．１時間程度かかります．
+1回めはイメージの作成に１時間程度かかります．
 電源とネットワークの状態のよい環境で実行してください．
-
-```bash
-$ vagrant up --provision
-```
-
-### 2回目以降
-
-Gust OSを起動．
 
 ```bash
 $ vagrant up
 ```
 
 ### SSH接続
-
 Macの場合
 
 ```bash
