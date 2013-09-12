@@ -1,6 +1,7 @@
 site :opscode
 
 metadata
+cookbook 'locale', github: "hw-cookbooks/locale"
 cookbook 'apt'
 cookbook 'zsh'
 cookbook 'git'

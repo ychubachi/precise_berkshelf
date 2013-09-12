@@ -89,12 +89,16 @@ Vagrant.configure("2") do |config|
       },
       emacs: {
         package: ["emacs24"]
+      },
+      locale: {
+        lang: "ja_JP.utf8"
       }
     }
 
     chef.run_list =
       [
        "precise",
+       "locale",
        "apt",
        "zsh",
        "git",
