@@ -98,11 +98,12 @@ Vagrant.configure("2") do |config|
     chef.run_list =
       [
        "precise",
-       "locale",
        "apt",
-       "zsh",
+       "precise::language-pack-ja",
+       "locale",
        "git",
        "vim",
+       "zsh",
        "ruby_build",
        "rbenv::user",
        "precise::emacs24",
