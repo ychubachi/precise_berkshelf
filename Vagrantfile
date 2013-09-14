@@ -105,12 +105,12 @@ Vagrant.configure("2") do |config|
        "git",
        "vim",
        "zsh",
-       "ruby_build",
-       "rbenv::user",
        "precise::emacs24",
        "precise::heroku",
-       "nodejs",
        "hub",
+       "ruby_build",
+       "rbenv::user",
+       "nodejs",
       ]
   end
 end
