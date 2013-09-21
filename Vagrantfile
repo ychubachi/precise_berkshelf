@@ -101,6 +101,7 @@ Vagrant.configure("2") do |config|
        "apt",
        "precise::language-pack-ja",
        "precise::shift_jis",
+       "precise::env",
        "locale",
        "git",
        "vim",
