@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
 gem 'berkshelf'
-gem 'veewee'
+gem 'veewee', :github => 'jedi4ever/veewee'
