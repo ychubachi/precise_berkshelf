@@ -11,6 +11,20 @@ vagrant up
 
 ## Amazon S3へのdeploy
 
+s3cmdをインストール
+
+```bash
+sudo apt-get install s3cmd
+```
+
+AWSのKeyとSecretを登録
+
+```bash
+s3cmd --config
+```
+
+スクリプトの実行
+
 ```bash
 deploy.sh
 ```
