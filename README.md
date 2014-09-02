@@ -29,7 +29,7 @@ sudo apt-get install s3cmd
 AWSのKeyとSecretを登録
 
 ```bash
-s3cmd --config
+s3cmd --configure
 ```
 
 スクリプトの実行
