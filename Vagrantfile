@@ -56,9 +56,9 @@ Vagrant.configure("2") do |config|
        "zsh",
        "precise::emacs24",
        "precise::heroku",
-       "hub",
+#       "hub",
        "ruby_build",
-       "rbenv::user",
+#       "rbenv::user",
        "nodejs",
       ]
   end
