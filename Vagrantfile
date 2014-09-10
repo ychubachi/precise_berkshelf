@@ -17,10 +17,10 @@ Vagrant.configure("2") do |config|
       rbenv: {
         user_installs: [{
           user: "vagrant",
-          rubies: ["2.0.0-p247"],
-          global: "2.0.0-p247",
+          rubies: ["2.1.2"],
+          global: "2.1.2",
           gems: {
-            "2.0.0-p247" => [
+            "2.1.2" => [
                              {name: "bundler"},
                              {name: "rails"},
             ]
@@ -37,20 +37,20 @@ Vagrant.configure("2") do |config|
 
     chef.run_list =
       [
-       "precise",
+       "enpit",
        "apt",
-       "precise::language-pack-ja",
-       "precise::shift_jis",
-       "precise::env",
+       "enpit::language-pack-ja",
+       "enpit::shift_jis",
+       "enpit::env",
        "locale",
        "git",
        "vim",
        "zsh",
-       "precise::emacs24",
-       "precise::heroku",
+       "enpit::emacs24",
+       "enpit::heroku", # https://community.opscode.com/cookbooks/heroku-toolbelt/versions/0.1.0
 #       "hub",
        "ruby_build",
-#       "rbenv::user",
+       "rbenv::user",
        "nodejs",
       ]
   end

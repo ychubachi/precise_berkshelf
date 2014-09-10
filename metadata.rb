@@ -1,4 +1,4 @@
-name             'precise'
+name             'enpit'
 maintainer       'Yoshihide Chubachi'
 maintainer_email 'yoshi@chubachi.net'
 license          'All rights reserved'
