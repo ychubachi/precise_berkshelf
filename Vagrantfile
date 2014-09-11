@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
        "vim",
        "zsh",
        "enpit::emacs24",
-       "enpit::heroku", # https://community.opscode.com/cookbooks/heroku-toolbelt/versions/0.1.0
+       "heroku-toolbelt",
 #       "hub",
        "ruby_build",
        "rbenv::user",
