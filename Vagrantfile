@@ -23,6 +23,7 @@ Vagrant.configure("2") do |config|
             "2.1.2" => [
                              {name: "bundler"},
                              {name: "rails"},
+                             {name: "travis"},
             ]
           }
         }]
@@ -52,6 +53,7 @@ Vagrant.configure("2") do |config|
        "ruby_build",
        "rbenv::user",
        "nodejs",
+       "enpit::github-connect",
       ]
   end
 end
