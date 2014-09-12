@@ -49,11 +49,12 @@ Vagrant.configure("2") do |config|
        "zsh",
        "enpit::emacs24",
        "heroku-toolbelt",
-#       "hub",
        "ruby_build",
        "rbenv::user",
        "nodejs",
        "enpit::github-connect",
+       "enpit::generate_rails",
+#       "hub",
       ]
   end
 end
