@@ -12,4 +12,3 @@ cookbook 'ruby_build'
 cookbook 'rbenv', github: "fnichol/chef-rbenv"
 cookbook 'nodejs'
 cookbook 'heroku-toolbelt'
-# cookbook 'hub'

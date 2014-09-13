@@ -11,11 +11,32 @@ bundle install
 berks install
 ```
 
-Vagrantにプラグインを入れて起動．
+VagrantにBerkshelfのプラグインを入れて起動．
 
 ```bash
 vagrant plugin install vagrant-berkshelf
+```
+
+起動する．
+
+```bash
 vagrant up
+```
+
+Snapshotもとれるようにする（VBox用）．
+
+```bash
+vagrant plugin install vagrant-vbox-snapshot
+vagrant snapshot take initial_snapshot
+```
+
+## Chefで取りこぼしたソフトウエアのインストール
+
+hubと，rbenvへのGemのインストールがChefでうまくいかないので，
+スクリプトを実行する．
+
+```bash
+vagrant ssh --command /vagrant/extra_provision.sh
 ```
 
 ## Amazon S3へのdeploy
@@ -37,3 +58,7 @@ s3cmd --configure
 ```bash
 deploy.sh
 ```
+
+
+# Tasks
+## hubはホームにインストール済み

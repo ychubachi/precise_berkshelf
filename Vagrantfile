@@ -19,14 +19,6 @@ Vagrant.configure("2") do |config|
           user: "vagrant",
           rubies: ["2.1.2"],
           global: "2.1.2",
-          gems: {
-            "2.1.2" => [
-                             {name: "bundler"},
-                             {name: "rails"},
-                             {name: "travis"},
-                             {name: "sinatra"},
-            ]
-          }
         }]
       },
       emacs: {
@@ -55,7 +47,6 @@ Vagrant.configure("2") do |config|
        "nodejs",
        "enpit::github-connect",
        "enpit::generate_rails",
-#       "hub",
       ]
   end
 end
