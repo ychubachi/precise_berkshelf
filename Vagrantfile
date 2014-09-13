@@ -24,6 +24,7 @@ Vagrant.configure("2") do |config|
                              {name: "bundler"},
                              {name: "rails"},
                              {name: "travis"},
+                             {name: "sinatra"},
             ]
           }
         }]
