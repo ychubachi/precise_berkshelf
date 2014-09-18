@@ -25,7 +25,8 @@ Vagrant.configure("2") do |config|
         package: ["emacs24"]
       },
       locale: {
-        lang: "ja_JP.utf8"
+        lang: "ja_JP.utf8",
+        lc_all: "ja_JP.utf8",
       }
     }
 
@@ -33,18 +34,14 @@ Vagrant.configure("2") do |config|
       [
        "enpit",
        "apt",
-       "enpit::language-pack-ja",
-       "enpit::shift_jis",
-       "enpit::env",
        "locale",
        "git",
        "vim",
        "zsh",
        "enpit::emacs24",
        "heroku-toolbelt",
-       "ruby_build",
+       "ruby_build",		# an rbenv plugin
        "rbenv::user",
-       "nodejs",
        "enpit::github-connect",
        "enpit::generate_rails",
       ]
