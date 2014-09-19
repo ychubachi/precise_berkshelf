@@ -34,4 +34,9 @@ fi
 gem install bundler rails travis sinatra
 rbenv rehash
 
+# Git config
+git config --global push.default simple
+git config --global core.editor 'emacs'
+
+# Good bye
 echo "Please re-login"
