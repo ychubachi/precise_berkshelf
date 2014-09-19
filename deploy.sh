@@ -1,7 +1,7 @@
 #!/bin/bash
 
 vagrant halt
-vagrant destroy
+vagrant destroy -f
 vagrant up
 vagrant ssh --command /vagrant/extra_provision.sh
 
