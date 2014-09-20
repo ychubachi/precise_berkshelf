@@ -27,6 +27,27 @@ Vagrant.configure("2") do |config|
       locale: {
         lang: "ja_JP.utf8",
         lc_all: "ja_JP.utf8",
+      },
+      postgresql: {
+        users: [
+          {
+            username: "vagrant",
+            password: "vagrant",
+            superuser: true,
+            createdb: true,
+            login: true
+          }
+        ],
+        databases: [
+           {
+             name: "vagrant",
+             owner: "vagrant",
+             template: "template0",
+             encoding: "UTF-8",
+             locale: "ja_JP.utf-8",
+             extensions: "hstore"
+           }
+         ]
       }
     }
 
@@ -36,12 +57,16 @@ Vagrant.configure("2") do |config|
        "apt",
        "locale",
        "git",
-       "vim",
        "zsh",
        "enpit::emacs24",
-       "heroku-toolbelt",
+       "vim",
+       "postgresql",
+       "postgresql::server",
+       "postgresql::client",
+       "postgresql::libpq",
        "ruby_build",		# an rbenv plugin
        "rbenv::user",
+       "heroku-toolbelt",
        "enpit::github-connect",
        "enpit::generate_rails",
        "enpit::bash_profile",
