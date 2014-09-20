@@ -44,6 +44,9 @@ Vagrant.configure("2") do |config|
        "rbenv::user",
        "enpit::github-connect",
        "enpit::generate_rails",
+       "enpit::bash_profile",
+       "enpit::gemrc",
+       "enpit::gitconfig",
       ]
   end
 end
