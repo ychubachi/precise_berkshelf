@@ -8,7 +8,7 @@ vagrant ssh --command /vagrant/extra_provision.sh
 rm package*.box
 vagrant package
 
-new_file="package-$(date -I).box"
+new_file="package_$(date +%Y-%m-%d_%H-%M).box"
 mv package.box $new_file
 echo "Create $new_file"
 
