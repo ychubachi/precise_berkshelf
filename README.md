@@ -2,32 +2,44 @@
 
 enPiT用の仮想環境を構築するための設定です．
 
-## 起動
+## 準備
 
-関連するRubyGemsのインストールと，レシピのインストール．
+- Vagrant
+- VirtualBox
+- Chef DK
 
-```bash
-bundle install
-berks install
-```
-
-VagrantにBerkshelfのプラグインを入れて起動．
+## Vagrantのプラグイン
+VagrantにChef，Berkshelfのプラグインを入れる．
 
 ```bash
+vagrant plugin install vagrant-omnibus
 vagrant plugin install vagrant-berkshelf
-```
-
-起動する．
-
-```bash
-vagrant up
 ```
 
 Snapshotもとれるようにする（VBox用）．
 
 ```bash
 vagrant plugin install vagrant-vbox-snapshot
+```
+
+Snapshotの取り方．
+
+```bash
 vagrant snapshot take initial_snapshot
+```
+
+## 起動
+
+レシピのインストール．
+
+```bash
+berks install
+```
+
+起動する．
+
+```bash
+vagrant up
 ```
 
 ## Chefで取りこぼしたソフトウエアのインストール
@@ -39,9 +51,9 @@ hubと，rbenvへのGemのインストールがChefでうまくいかないの�
 vagrant ssh --command /vagrant/extra_provision.sh
 ```
 
-## Amazon S3へのdeploy
+## Amazon S3の設定
 
-s3cmdをインストール
+デプロイするために、s3cmdをインストール
 
 ```bash
 sudo apt-get install s3cmd
@@ -53,7 +65,8 @@ AWSのKeyとSecretを登録
 s3cmd --configure
 ```
 
-スクリプトの実行
+## スクリプト
+以上を行うスクリプトを用意した．
 
 ```bash
 deploy.sh
