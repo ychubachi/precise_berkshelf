@@ -1,8 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/trusty32"
+VAGRANTFILE_API_VERSION = '2'
+
+Vagrant.require_version '>= 1.5.0'
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = 'chef/ubuntu-14.04'
 
   config.vm.network "private_network", ip: "192.168.33.10"
   config.vm.network "forwarded_port", guest: 3000, host: 3000
@@ -17,8 +21,8 @@ Vagrant.configure("2") do |config|
       rbenv: {
         user_installs: [{
           user: "vagrant",
-          rubies: ["2.1.2", "2.1.3"],
-          global: "2.1.2",
+          rubies: ["2.2.2"],
+          global: "2.2.2",
         }]
       },
       emacs: {
