@@ -7,8 +7,8 @@ cookbook 'locale'
 cookbook 'git'
 cookbook 'zsh'
 cookbook 'vim'
-cookbook 'emacs', github: "mattray/emacs"
+cookbook 'emacs', github: 'mattray/emacs'
 cookbook 'ruby_build'
-cookbook 'rbenv', github: "fnichol/chef-rbenv"
+cookbook 'rbenv', github: 'fnichol/chef-rbenv'
 cookbook 'heroku-toolbelt'
 cookbook 'postgresql', github: 'phlipper/chef-postgresql'
