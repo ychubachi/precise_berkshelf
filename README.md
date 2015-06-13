@@ -75,5 +75,6 @@ deploy.sh
 
 ## Box の登録先
 
+- [S3 Management Console](https://console.aws.amazon.com/s3/home?region=us-west-2&bucket=vagrant-enpit&prefix=)
 - [Vagrant box ychubachi/enpit | Atlas by HashiCorp](https://atlas.hashicorp.com/ychubachi/boxes/enpit)
 
