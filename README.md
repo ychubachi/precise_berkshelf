@@ -73,5 +73,7 @@ deploy.sh
 ```
 
 
-# Tasks
-## hubはホームにインストール済み
+## Box の登録先
+
+- [Vagrant box ychubachi/enpit | Atlas by HashiCorp](https://atlas.hashicorp.com/ychubachi/boxes/enpit)
+
