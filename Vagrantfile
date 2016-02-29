@@ -8,13 +8,23 @@ Vagrant.require_version '>= 1.5.0'
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = 'ubuntu/trusty32'
 
-  config.vm.network "private_network", ip: "192.168.33.10"
+  # config.vm.network "private_network", ip: "192.168.33.10"
   config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.hostname = "enpit"
 
   config.omnibus.chef_version = :latest
 
   config.berkshelf.enabled = true
+
+  config.vm.boot_timeout = 600
+    
+  config.vm.provider "virtualbox" do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    vb.gui = true
+
+    # Customize the amount of memory on the VM:
+    vb.memory = "1024"
+  end
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
