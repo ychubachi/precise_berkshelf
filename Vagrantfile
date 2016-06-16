@@ -76,6 +76,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
        "enpit::bash_profile",
        "enpit::gemrc",
        "enpit::gitconfig",
+       "enpit::hub",
       ]
   end
 end
