@@ -69,7 +69,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
        "postgresql::client",
        "postgresql::libpq",
        "ruby_build",		# an rbenv plugin
-       "rbenv::user",
+       "ruby_rbenv::user",
        "heroku-toolbelt",
        "enpit::github-connect",
        "enpit::generate_rails",
