@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       rbenv: {
         user_installs: [{
           user: "vagrant",
-          rubies: ["2.2.5", "1.9.3"],
+          rubies: ["2.2.5", "1.9.3-p551"],
           global: "2.2.5",
         }]
       },
